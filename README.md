@@ -15,4 +15,4 @@ Lab 7: [Azure resource lock](https://learn.microsoft.com/training/modules/descri
 ### Day 2   
 Lab 8: [Load balancing VMs](labs/load-balancer/)   
 Lab 9: [Entra ID (Active Directory)](labs/entra-id-users/)   
-Lab 10: [Use ARM templates](labs/arm-templates/)   
+Lab 10: [Use ARM templates](https://jruels.github.io/adv-azure-classpage/labs/01-arm-templates/)   

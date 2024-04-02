@@ -349,10 +349,12 @@ We need to ensure the main deployment template, `azuredeploy.json`, is accessibl
 Start by uploading `azuredeploy.json`  to blog storage. 
 
 1. In the Azure Portal click **Storage accounts** on the blade and then on the new screen click on the storage account you created with the `PowerShell` script. 
-![](index/azure-stor-account.png)
+  ![](index/azure-stor-account.png)
 
-2. Click **Containers**
-3. Create a new container and give it public access. 
+2. On the left side menu, go to **Settings** -> **Configuration**
+3. Click **Enabled** under **Allow Blob anonymous acces**
+4. Click **Containers**
+5. Create a new container and give it public access. 
 
 ![](index/A9E08C43-4626-4B97-8087-7F3A34DB0731.png)
 

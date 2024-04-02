@@ -91,19 +91,26 @@ The linked storage template we are creating, `storage.json` will create a storag
       "properties": {}
     }
 ```
-```
-4. Next, remove the `variables` section and all variable definitions, as highlighted below,
-![](index/linkedtemplatestorage2.png)
 
-5. Next, remove all `parameter` values except **location** and add the following parameter code. It should end up looking as in the screenshot below.
-```json
-"storageAccountName":{
-    "type": "string",
-    "metadata": {
-        "description": "Azure Storage account name."
-    }
-    },
-```
+
+
+4. Next, remove the `variables` section and all variable definitions, as highlighted below,
+
+   
+
+   ![](index/linkedtemplatestorage2.png)
+
+   
+
+   5. Next, remove all `parameter` values except **location** and add the following parameter code. It should end up looking as in the screenshot below.
+   ```json
+   "storageAccountName":{
+       "type": "string",
+       "metadata": {
+           "description": "Azure Storage account name."
+       }
+       },
+   ```
 
 ![](index/linkedtemplatestorage4.png)
 

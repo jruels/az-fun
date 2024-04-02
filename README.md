@@ -11,3 +11,7 @@ Lab 4: [Azure storage](https://docs.microsoft.com/learn/modules/describe-azure-s
 Lab 5: [Azure pricing calculator](https://learn.microsoft.com/training/modules/describe-cost-management-azure/4-exercise-estimate-workload-costs-use-pricing-calculator)   
 Lab 6: [Azure TCO calculator](https://learn.microsoft.com/training/modules/describe-cost-management-azure/5-exercise-compare-workload-costs-use-total-cost-ownership-calculator)   
 Lab 7: [Azure resource lock](https://learn.microsoft.com/training/modules/describe-features-tools-azure-for-governance-compliance/5-exercise-configure-resource-lock)   
+
+### Day 2   
+Lab 8: [Load balancing VMs](labs/load-balancer/)   
+Lab 9: [Entra ID (Active Directory)](labs/entra-id-users/)   

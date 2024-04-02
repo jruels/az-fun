@@ -6,23 +6,15 @@ Get started with Azure Load Balancer by using the Azure portal to create a publi
 
 
 
-## Prerequisites
-
-- An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-
-
-
 ## Create NAT gateway
 
 In this section, you'll create a NAT gateway for outbound internet access for resources in the virtual network. 
 
-1. Sign in to the [Azure portal](https://portal.azure.com/).
+1. In the search box at the top of the portal, enter **NAT gateway**. Select **NAT gateways** in the search results.
 
-2. In the search box at the top of the portal, enter **NAT gateway**. Select **NAT gateways** in the search results.
+2. Select **+ Create**.
 
-3. Select **+ Create**.
-
-4. In the **Basics** tab of **Create network address translation (NAT) gateway** enter or select the following information:
+3. In the **Basics** tab of **Create network address translation (NAT) gateway** enter or select the following information:
 
    | Setting                | Value                                                        |
    | :--------------------- | :----------------------------------------------------------- |
@@ -32,22 +24,22 @@ In this section, you'll create a NAT gateway for outbound internet access for re
    | **Instance details**   |                                                              |
    | NAT gateway name       | Enter **lb-nat-gateway**.                                    |
    | Region                 | Select **East US**.                                          |
-   | Availability zone      | Select **None**.                                             |
+   | Availability zone      | Select **No Zone**.                                          |
    | Idle timeout (minutes) | Enter **15**.                                                |
 
    ![Screenshot of Create network address translation gateway window in the Azure portal.](/Users/jruels/Library/CloudStorage/Dropbox-IIS/Training/Azure Fundamentals/classpage/labs/load-balancer/images/create-nat-gateway.png)
 
-5. Select the **Outbound IP** tab or select the **Next: Outbound IP** button at the bottom of the page.
+4. Select the **Outbound IP** tab or select the **Next: Outbound IP** button at the bottom of the page.
 
-6. Select **Create a new public IP address** under **Public IP addresses**.
+5. Select **Create a new public IP address** under **Public IP addresses**.
 
-7. Enter **nat-gw-public-ip** in **Name** in **Add a public IP address**.
+6. Enter **nat-gw-public-ip** in **Name** in **Add a public IP address**.
 
-8. Select **OK**.
+7. Select **OK**.
 
-9. Select the blue **Review + create** button at the bottom of the page, or select the **Review + create** tab.
+8. Select the blue **Review + create** button at the bottom of the page, or select the **Review + create** tab.
 
-10. Select **Create**.
+9. Select **Create**.
 
 
 
@@ -65,14 +57,14 @@ Hourly pricing starts from the moment that Bastion is deployed, regardless of ou
 
 3. On the **Basics** tab of **Create virtual network**, enter or select the following information:
 
-   | Setting              | Value                                                        |
-   | :------------------- | :----------------------------------------------------------- |
-   | **Project details**  |                                                              |
-   | Subscription         | Select your subscription.                                    |
-   | Resource group       | Select **Create new**. Enter **load-balancer-rg** in Name. Select **OK**. |
-   | **Instance details** |                                                              |
-   | Name                 | Enter **lb-vnet**.                                           |
-   | Region               | Select **East US**.                                          |
+   | Setting              | Value                       |
+   | :------------------- | :-------------------------- |
+   | **Project details**  |                             |
+   | Subscription         | Select your subscription.   |
+   | Resource group       | Select **load-balancer-rg** |
+   | **Instance details** |                             |
+   | Name                 | Enter **lb-vnet**.          |
+   | Region               | Select **East US**.         |
 
    ![Screenshot of Basics tab of Create virtual network in the Azure portal.](/Users/jruels/Library/CloudStorage/Dropbox-IIS/Training/Azure Fundamentals/classpage/labs/load-balancer/images/create-virtual-network-basics.png)
 
@@ -164,9 +156,9 @@ During the creation of the load balancer, you configure:
 
 12. Leave the default of **Microsoft Network** for **Routing preference**.
 
-13. Select **OK**.
+13. Select **Save**.
 
-14. Select **Add**.
+14. Select **Save**.
 
 15. Select **Next: Backend pools** at the bottom of the page.
 
@@ -234,16 +226,16 @@ These VMs are added to the backend pool of the load balancer that was created ea
    | **Instance details**      |                                                              |
    | Virtual machine name      | Enter **lb-VM1**                                             |
    | Region                    | Select **((US) East US)**                                    |
-   | Availability Options      | Select **Availability zones**                                |
+   | Availability Options      | Select **Availability zone**                                 |
    | Availability zone         | Select **Zone 1**                                            |
    | Security type             | Select **Standard**.                                         |
-   | Image                     | Select **Windows Server 2022 Datacenter: Azure Edition - Gen2** |
+   | Image                     | Select **Windows Server 2022 Datacenter: Azure Edition - x64 Gen2** |
    | Azure Spot instance       | Leave the default of unchecked.                              |
-   | Size                      | Choose VM size or take default setting                       |
+   | Size                      | Accept the default setting                                   |
    | **Administrator account** |                                                              |
-   | Username                  | Enter a username                                             |
-   | Password                  | Enter a password                                             |
-   | Confirm password          | Reenter password                                             |
+   | Username                  | **azureuser**                                                |
+   | Password                  | **P@ssW0rd1234$**                                            |
+   | Confirm password          | **P@ssW0rd1234$**                                            |
    | **Inbound port rules**    |                                                              |
    | Public inbound ports      | Select **None**                                              |
 
@@ -302,7 +294,7 @@ VMs that you create by using virtual machine scale sets in flexible orchestratio
 
 2. Select **myVM1**.
 
-3. On the **Overview** page, select **Connect**, then **Bastion**.
+3. On the **Overview** page, select **Connect via Bastion**.
 
 4. Enter the username and password entered during VM creation.
 

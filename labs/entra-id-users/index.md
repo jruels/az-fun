@@ -78,7 +78,7 @@ You'll now assign members to the Developer group.
 
 3. On the top menu bar, select **Add members**.
 
-   ![Screenshot that shows Add member button.](/Users/jruels/Library/CloudStorage/Dropbox-IIS/Training/Azure Fundamentals/classpage/labs/entra-id-users/images/5-add-group-member.png)
+   ![Screenshot that shows Add member button.](images/5-add-group-member.png)
 
    The **Add members** pane appears.
 

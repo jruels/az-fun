@@ -2,7 +2,7 @@
 
 Get started with Azure Load Balancer by using the Azure portal to create a public load balancer for a backend pool with two virtual machines. Other resources include Azure Bastion, NAT Gateway, a virtual network, and the required subnets.
 
-![Diagram of resources deployed for a standard load balancer implement.](/Users/jruels/Library/CloudStorage/Dropbox-IIS/Training/Azure Fundamentals/classpage/labs/load-balancer/images/public-load-balancer-overview.png)
+![Diagram of resources deployed for a standard load balancer implement.](images/public-load-balancer-overview.png)
 
 
 
@@ -27,7 +27,7 @@ In this section, you'll create a NAT gateway for outbound internet access for re
    | Availability zone      | Select **No Zone**.                                          |
    | Idle timeout (minutes) | Enter **15**.                                                |
 
-   ![Screenshot of Create network address translation gateway window in the Azure portal.](/Users/jruels/Library/CloudStorage/Dropbox-IIS/Training/Azure Fundamentals/classpage/labs/load-balancer/images/create-nat-gateway.png)
+   ![Screenshot of Create network address translation gateway window in the Azure portal.](images/create-nat-gateway.png)
 
 4. Select the **Outbound IP** tab or select the **Next: Outbound IP** button at the bottom of the page.
 
@@ -66,7 +66,7 @@ Hourly pricing starts from the moment that Bastion is deployed, regardless of ou
    | Name                 | Enter **lb-vnet**.          |
    | Region               | Select **East US**.         |
 
-   ![Screenshot of Basics tab of Create virtual network in the Azure portal.](/Users/jruels/Library/CloudStorage/Dropbox-IIS/Training/Azure Fundamentals/classpage/labs/load-balancer/images/create-virtual-network-basics.png)
+   ![Screenshot of Basics tab of Create virtual network in the Azure portal.](images/create-virtual-network-basics.png)
 
 4. Select the **Security** tab or **Next** button at the bottom of the page.
 
@@ -95,7 +95,7 @@ Hourly pricing starts from the moment that Bastion is deployed, regardless of ou
    | **Security**               |                                             |
    | NAT Gateway                | Select **lb-nat-gateway**.                  |
 
-   ![Screenshot of default subnet rename and configuration.](/Users/jruels/Library/CloudStorage/Dropbox-IIS/Training/Azure Fundamentals/classpage/labs/load-balancer/images/edit-subnet-window.png)
+   ![Screenshot of default subnet rename and configuration.](images/edit-subnet-window.png)
 
 8. Select **Save**.
 
@@ -132,7 +132,7 @@ During the creation of the load balancer, you configure:
    | Type                 | Select **Public**              |
    | Tier                 | Leave the default **Regional** |
 
-   ![Screenshot of create standard load balancer basics tab.](/Users/jruels/Library/CloudStorage/Dropbox-IIS/Training/Azure Fundamentals/classpage/labs/load-balancer/images/create-standard-load-balancer.png)
+   ![Screenshot of create standard load balancer basics tab.](images/create-standard-load-balancer.png)
 
 4. Select **Next: Frontend IP configuration** at the bottom of the page.
 
@@ -333,7 +333,7 @@ VMs that you create by using virtual machine scale sets in flexible orchestratio
 
 3. Copy the item in **IP address**. Paste the public IP into the address bar of your browser. The custom VM page of the IIS Web server is displayed in the browser.
 
-   ![Screenshot of load balancer test](/Users/jruels/Library/CloudStorage/Dropbox-IIS/Training/Azure Fundamentals/classpage/labs/load-balancer/images/load-balancer-test.png)
+   ![Screenshot of load balancer test](images/load-balancer-test.png)
 
 
 

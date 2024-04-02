@@ -1,4 +1,4 @@
-# Exercise - Add and delete users in Microsoft Entra ID
+# Exercise - Manage users and groups in Microsoft Entra ID
 
 You need to add member user accounts for the new developer team in your organization.
 
@@ -6,78 +6,11 @@ In this exercise, you'll create a new Microsoft Entra organization to hold all o
 
 
 
-## Create a Microsoft Entra organization
-
-To hold all of the users you create in this exercise, create a new organization.
-
-1. Sign in to the [Azure portal](https://portal.azure.com/).
-
-2. On the Azure portal home page, under **Azure services**, select **Create a resource**.
-
-3. In **Create a resource**, in the left menu under **Categories**, select **Identity**. Under **Popular Azure services**, select **Create** under **Microsoft Entra ID**.
-
-   ![Screenshot that shows the create link for Microsoft Entra ID under Azure services.](/Users/jruels/Library/CloudStorage/Dropbox-IIS/Training/Azure Fundamentals/classpage/labs/entra-id-users/images/azure-active-directory-create.png)
-
-4. In **Create a tenant**, on the **Basics** tab, enter the following value for the setting.
-
-   
-
-   | Setting              | Value              |
-   | :------------------- | :----------------- |
-   | **Tenant type**      |                    |
-   | Select a tenant type | Microsoft Entra ID |
-
-5. Select **Next : Configuration**, and enter the following values for each setting.
-
-   
-
-   | Setting               | Value                                                        |
-   | :-------------------- | :----------------------------------------------------------- |
-   | **Directory details** |                                                              |
-   | Organization name     | Enter *Contoso Marketing Company*                            |
-   | Initial domain name   | Enter *contosomarketingXXXX* where you replace XXXX with numbers or letters to make your domain name unique |
-
-6. Select **Next : Review + create**.
-
-7. After validation passes, select **Create**. The **Help us prove you're not a robot** pane appears.
-
-8. Enter the appropriate match to the request, and select **Submit**. Wait for the creation of your tenant to be completed.
-
-9. On the **Help us prove you're not a robot** pane, select the **Click here to navigate to your new tenant: Contoso Marketing Company** link.
-
-   ![Screenshot that shows the link to manage your new organization.](/Users/jruels/Library/CloudStorage/Dropbox-IIS/Training/Azure Fundamentals/classpage/labs/entra-id-users/images/3-switch-directory.png)
-
-   The **Overview** pane for *Contoso Marketing Company* appears.
-
-
-
-## Get a free trial for Microsoft Entra ID P1 or P2
-
-To complete all the exercises in this module, you'll need to activate a free trial for Microsoft Entra ID P1 or P2.
-
-1. In the left menu pane, under **Manage**, select **Licenses**. The **Overview** pane for *Licenses* appears.
-
-2. On the right side of the pane, under **Quick tasks**, select **Get a free trial**.
-
-   ![Screenshot that shows the link to create free trial.](/Users/jruels/Library/CloudStorage/Dropbox-IIS/Training/Azure Fundamentals/classpage/labs/entra-id-users/images/3-ad-get-started-get-trial.png)
-
-   The **Activate** pane appears.
-
-3. Under **Microsoft Entra ID P2**, expand **Free trial**, and then select **Activate**. If you don't have that option, that's ok. You can complete most of the exercises without it. After the premium license activates, the **Overview** pane for *Licenses*reappears.
-
-4. Return to the **Overview** pane for Microsoft Entra ID for Contoso Marketing Company. On the **Overview** tab, under the **Basic information** section, refresh the browser until you see **Microsoft Entra ID P2** appear aside **License**. It may take a couple of minutes.
-
-   ![Screenshot that shows Microsoft Entra ID P2 on the Overview page under Tenant information.](/Users/jruels/Library/CloudStorage/Dropbox-IIS/Training/Azure Fundamentals/classpage/labs/entra-id-users/images/3-azure-ad-premium-2.png)
-
-   Under **My feed**, you should also see your role listed as the **Global administrator**.
-
-5. Under **Basic information**, copy the **Primary domain** name to use in the next section.
-
 ## Add a new user
 
 Now, let's create a user account.
 
-1. In the Microsoft Entra organization you created, in the left menu pane, under **Manage**, select **Users**. The **All users**pane appears.
+1. In the Microsoft Entra organization you created, in the left menu pane, under **Manage**, select **Users**. The **All users** pane appears.
 
 2. In the top menu bar, select **New user**, then select **Create new user** in the drop-down. The **New user** pane appears for *Contoso Marketing Company*.
 
@@ -85,7 +18,7 @@ Now, let's create a user account.
 
    **Identity**
 
-   - **User name**: chris@contosomarketingXXXXXX.onmicrosoft.com. The domain name should match the primary domain you copied in the previous section.
+   - **User name**: *chris* 
    - **Name**: *Chris Green*
 
    **Password**
@@ -100,7 +33,7 @@ You can delete users after they're created.
 
 1. In your **All users** pane for Microsoft Entra organization, from the list, select **Chris Green**.
 2. In the top menu bar, select **Delete**. If you don't see that option, select **More**.
-3. Select **Delete** again to confirm deletion.
+3. Select **Ok** to confirm deletion.
 
 ## Recover a deleted user
 
@@ -115,23 +48,15 @@ You can restore deleted users. View the list of the deleted users, and then rest
 
 # Exercise - Assign users to Microsoft Entra groups
 
-In this exercise, you'll create a Microsoft Entra group to manage the developer team's access. You'll also add a rule for the group to manage the membership automatically.
 
- Note
-
-This exercise depends on having completed prior exercises in this module. If you haven't done so, complete [exercise in unit 3](https://learn.microsoft.com/en-us/training/modules/create-users-and-groups-in-azure-active-directory/3-exercise-add-delete-users-azure-ad) before you begin.
 
 ## Add a new group
 
-1. Sign in to the [Azure portal](https://portal.azure.com/).
+1. In the left menu pane, under **Manage**, select **Groups**. The **All groups** pane appears for your Microsoft Entra ID.
 
-2. Go to the Microsoft Entra ID you created earlier in this module.
+2. On the top menu bar, select **New group**. The **New Group** pane appears.
 
-3. In the left menu pane, under **Manage**, select **Groups**. The **All groups** pane appears for your Microsoft Entra ID.
-
-4. On the top menu bar, select **New group**. The **New Group** pane appears.
-
-5. Enter the following values for each setting.
+3. Enter the following values for each setting.
 
    
 
@@ -141,7 +66,7 @@ This exercise depends on having completed prior exercises in this module. If you
    | Group name        | Developer group |
    | Group description | Developer team  |
 
-6. Select **Create**. The **Groups | All groups** pane appears, including the new group in the list of Groups. You might need to refresh to see your new group.
+4. Select **Create**. The **Groups | All groups** pane appears, including the new group in the list of Groups. You might need to refresh to see your new group.
 
 ## Use direct assignment to add a user to this group
 
@@ -160,44 +85,3 @@ You'll now assign members to the Developer group.
 4. Search for and select **Chris Green**.
 
 5. Select **Select**. You'll see this user in the *Direct members* list for the Developers group in the **Members** pane. You might need to refresh to see the users.
-
-## Modify the group to use dynamic assignment
-
-You can change the group to use dynamic assignment. Membership then depends on whether a user meets the rules you set for the group.
-
-If you didn't activate the free trial for Microsoft Entra ID P1 or P2, you won't be able to complete this section. That's ok. You can still see how you change the group to use dynamic assignment.
-
-1. In the left menu pane, under **Manage**, select **Properties**. The **Properties** pane appears for your developer group.
-
-2. Change **Membership type** to **Dynamic User**.
-
-3. Under **Dynamic user members**, select the **Add dynamic query** link.
-
-   ![Screenshot that shows the Add dynamic query link.](/Users/jruels/Library/CloudStorage/Dropbox-IIS/Training/Azure Fundamentals/classpage/labs/entra-id-users/images/5-add-dynamic-query.png)
-
-   The **Dynamic membership rules** pane appears.
-
-4. On the **Configure Rules** tab, select the following values for the rule:
-
-   
-
-   | Setting  | Value         |
-   | :------- | :------------ |
-   | Property | country       |
-   | Operator | Equals        |
-   | Value    | United States |
-
-   ![Screenshot that shows how to assign a dynamic membership rule.](/Users/jruels/Library/CloudStorage/Dropbox-IIS/Training/Azure Fundamentals/classpage/labs/entra-id-users/images/5-dynamic-member.png)
-
-   The membership of this group now depends on whether the user is in the United States.
-
-5. Select another field to enable **Save**.
-
-6. On the top menu bar, select **Save**. The **Properties** pane reappears for your developer group.
-
-## Change group back to assigned
-
-You'll need to assign a guest user to the Developer group in the next exercise, so let's change the membership type back to **Assigned**.
-
-1. Change **Membership type** to **Assigned**.
-2. On the top menu bar, select **Save**.
